@@ -9,7 +9,6 @@ export interface ButtonProps extends ButtonBaseProps, WithPlacement{
 
 export function Button(props: ButtonProps){
   const {tooltips, position, ...bottonBaseProps} = props
-  console.log(tooltips)
   if(tooltips){
     return <Tooltips text={tooltips} position={position}><ButtonBase {...bottonBaseProps} /></Tooltips>
   }else{

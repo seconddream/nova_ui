@@ -1,6 +1,6 @@
 export type Color = 'white' | 'gray' | 'amber' | 'emerald' | 'teal' | 'sky' | 'indigo' | 'fuchsia' | 'pink' | 'rose'
 
-export type ItemSize = 'lg' | 'md' | 'sm' | 'xs'
+export type ItemSize = 'lg' | 'md' | 'sm'
 export interface WithItemSize {
   size?: ItemSize
 }
@@ -9,7 +9,6 @@ export function parseItemSize(size: ItemSize) {
     lg: size === 'lg',
     md: size === 'md',
     sm: size === 'sm',
-    xs: size === 'xs',
   }
 }
 
@@ -48,3 +47,9 @@ export function parsePlacement(position: Placement) {
   }
 }
 
+export interface WithFormControl {
+  value?: any
+  error?: any
+  disabled?: boolean
+  onChange?: (value:any)=>any
+}

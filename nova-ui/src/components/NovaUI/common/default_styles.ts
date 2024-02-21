@@ -107,6 +107,7 @@ export const ItemSizing = {
     xs: 'gap-1.5',
   }
 }
+export const FormItemDefaultWidth = 'w-80'
 
 export const BorderTheme = {
   Item: 'border-1 border-slate-300'

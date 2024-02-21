@@ -1,9 +1,10 @@
 'use client'
 import { Button } from '@/components/NovaUI/components/Button'
-import ButtonBase from '@/components/NovaUI/components/Button/ButtonBase'
-import InputBase from '@/components/NovaUI/components/Input/InputBase'
+
+import Input from '@/components/NovaUI/components/Input'
 import Label from '@/components/NovaUI/components/Label'
 import Tooltips from '@/components/NovaUI/components/Tooltips'
+import { useState } from 'react'
 import {
   AiOutlineClockCircle,
   AiOutlineClose,
@@ -23,29 +24,29 @@ export default function Home() {
           <div key={index} className='flex gap-6 w-full justify-center'>
             {['primary', 'secondary', 'transparent', 'slient'].map((type, index) => {
               return (
-                <ButtonBase icon={<AiOutlineSmile />} key={index} type={type} size={size}>{`${type
+                <Button icon={<AiOutlineSmile />} key={index} type={type} size={size}>{`${type
                   .charAt(0)
-                  .toUpperCase()}${type.slice(1)}`}</ButtonBase>
+                  .toUpperCase()}${type.slice(1)}`}</Button>
               )
             })}
-            <ButtonBase icon={<AiOutlineSmile />} key={3} size={size} disabled>
+            <Button icon={<AiOutlineSmile />} key={3} size={size} disabled>
               Disabled
-            </ButtonBase>
-            <ButtonBase icon={<AiOutlineSmile />} key={4} size={size} loading>
+            </Button>
+            <Button icon={<AiOutlineSmile />} key={4} size={size} loading>
               Loading
-            </ButtonBase>
-            <ButtonBase icon={<AiOutlineSmile />} key={5} size={size} success>
+            </Button>
+            <Button icon={<AiOutlineSmile />} key={5} size={size} success>
               Success
-            </ButtonBase>
-            <ButtonBase icon={<AiOutlineSmile />} key={6} size={size} warning foucsable>
+            </Button>
+            <Button icon={<AiOutlineSmile />} key={6} size={size} warning foucsable>
               Warning
-            </ButtonBase>
-            <ButtonBase icon={<AiOutlineSmile />} key={7} size={size} danger>
+            </Button>
+            <Button icon={<AiOutlineSmile />} key={7} size={size} danger>
               Danger
-            </ButtonBase>
-            <ButtonBase icon={<AiOutlineEye />} key={8} size={size} shape='circle' type='slient' />
-            <ButtonBase icon={<AiOutlineClose />} key={10} size={size} shape='circle' type='slient' />
-            <ButtonBase icon={<AiOutlineDelete />} key={11} size={size} shape='circle' type='slient' />
+            </Button>
+            <Button icon={<AiOutlineEye />} key={8} size={size} shape='circle' type='slient' />
+            <Button icon={<AiOutlineClose />} key={10} size={size} shape='circle' type='slient' />
+            <Button icon={<AiOutlineDelete />} key={11} size={size} shape='circle' type='slient' />
           </div>
         )
       })}
@@ -72,10 +73,20 @@ export default function Home() {
           )
         })}{' '}
       </div>
-      <div className='flex gap-6 w-full justify-center '>
-        <InputBase error={true} suffix='Kg' prefix='https://' />
-        <InputBase suffix='Kg' prefix='https://' />
-        <Button foucsable onClick={()=>{console.log('login')}}>OK</Button>
+      <div className='flex flex-col gap-6 w-full justify-center '>
+        <Input error={false} disabled size='lg' value={'ksadjfl'} suffix='.com' prefix='https://' />
+        <Input error={false} size='md' suffix='.com' prefix='https://' />
+        <Input error={false} size='sm' suffix='.com' prefix='https://' />
+        <Input type='password' allowShowPassword={true} />
+        <Input type='number' suffix='Kg' />
+        <Button
+          foucsable
+          onClick={() => {
+            console.log('login')
+          }}
+        >
+          OK
+        </Button>
       </div>
     </div>
   )

@@ -61,6 +61,7 @@ export default function ButtonBase(props: ButtonBaseProps) {
         { 'rounded-full': circle, [ItemSizing.RoundCorner[size]]: !circle },
         {
           'w-full': full,
+          'w-fit': !full,
           // colors
           [`${ColorTheme[type].bg} ${ColorTheme[type].text} ${ColorTheme[type].hoverBg} ${ColorTheme[type].hoverText}`]:
             !isAbnormalState,
@@ -80,7 +81,7 @@ export default function ButtonBase(props: ButtonBaseProps) {
         e.preventDefault()
         e.stopPropagation()
       }}
-      onClick={(e)=>{
+      onClick={(e) => {
         e.preventDefault()
         e.stopPropagation()
         onClick?.()
