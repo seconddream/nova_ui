@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { Color, WithItemSize } from '../../common/shared_interfaces'
+import { Color } from '../../common/shared_interfaces'
 import { ItemSizing } from '../../common/default_styles'
 
 const LabelColors = {

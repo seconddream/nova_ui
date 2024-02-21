@@ -1,5 +1,5 @@
 import { ReactNode, useRef } from 'react'
-import { WithItemSize, parseItemSize } from '../../common/shared_interfaces'
+import { WithItemSize } from '../../common/shared_interfaces'
 import classNames from 'classnames'
 import { ColorTheme, FocusStyle, ItemSizing } from '../../common/default_styles'
 import { AiOutlineCheckCircle, AiOutlineExclamationCircle, AiOutlineLoading3Quarters } from 'react-icons/ai'

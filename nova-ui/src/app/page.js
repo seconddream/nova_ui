@@ -1,9 +1,9 @@
 'use client'
-import { Button } from '@/components/NovaUI/components/Button'
+import { Button } from '@/components/PegasusUI/components/Button'
 
-import Input from '@/components/NovaUI/components/Input'
-import Label from '@/components/NovaUI/components/Label'
-import Tooltips from '@/components/NovaUI/components/Tooltips'
+import Input from '@/components/PegasusUI/components/Input'
+import Label from '@/components/PegasusUI/components/Label'
+import Tooltips from '@/components/PegasusUI/components/Tooltips'
 import { useState } from 'react'
 import {
   AiOutlineClockCircle,

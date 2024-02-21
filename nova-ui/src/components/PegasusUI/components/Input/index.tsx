@@ -1,11 +1,9 @@
-import { ReactNode, useMemo, useState } from 'react'
+import { useState } from 'react'
 import { WithFormControl, WithItemSize } from '../../common/shared_interfaces'
 import classNames from 'classnames'
 import { BorderTheme, ColorTheme, FocusStyle, FormItemDefaultWidth, ItemSizing } from '../../common/default_styles'
 import Label from '../Label'
 import {
-  AiFillCaretDown,
-  AiFillCaretUp,
   AiOutlineCloseCircle,
   AiOutlineCopy,
   AiOutlineEye,
